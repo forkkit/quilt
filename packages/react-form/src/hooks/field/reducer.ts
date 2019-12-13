@@ -62,10 +62,13 @@ export function reduceField<Value>(
     case 'update': {
       const newValue = action.payload;
       const {defaultValue} = state;
+      const isDirty = Array.isArray(defaultValue)
+        ? JSON.stringify(defaultValue) !== JSON.stringify(newValue)
+        : defaultValue !== newValue;
 
       return {
         ...state,
-        dirty: defaultValue !== newValue,
+        dirty: isDirty,
         value: newValue,
         touched: true,
       };
