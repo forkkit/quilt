@@ -7,6 +7,10 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- ## [Unreleased] -->
 
+## [1.5.0] - 2020-01-22
+
+- Fixed some typos in `useMountedRef` hook https://github.com/Shopify/quilt/pull/1243
+
 ## [1.4.0] - 2019-12-19
 
 - Added `useToggle` hook ([#1220](https://github.com/Shopify/quilt/pull/1220))
